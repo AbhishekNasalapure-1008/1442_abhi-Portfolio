@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Abhishek | Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+    <!-- Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+    <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles-confetti@2.12.0/tsparticles.confetti.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/preset-design@3.0.0/tsparticles.preset.design.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@3.3.0/tsparticles.bundle.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="custom-cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">1442_abhi</div>
+        <input type="checkbox" id="menu-toggle" hidden>
+        <label for="menu-toggle" class="menu-icon"><i class="fas fa-bars"></i></label>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#hackathons">Hackathons</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <div id="particles-js"></div>
+    <section class="hero">
+        <div class="hero-left">
+            <h1 class="hero-text-container">
+                <span class="intro hero-text">Hi, I am</span>
+                <span class="name-highlight hero-text">Abhishek Sandeep Nasalapure</span>
+            </h1>
+            <h2 id="hero-subtitle" class="hero-text"></h2>
+            <p class="tagline hero-text">WE DESIGN & BUILD BRANDS</p>
+            <div class="buttons hero-text">
+                <a href="#" class="btn primary magnetic">Hire me</a>
+                <a href="./assets/resume.pdf" class="btn outline magnetic" download>Download CV</a>
+            </div>
+        </div>
+        <div class="hero-right">
+            <div class="bg-skew"></div>
+            <img src="./assets/main sec img.png" alt="Abhishek" class="profile-img" />
+        </div>
+    </section>
+
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-img">
+                    <img src="./assets/intro sec image.jpg" alt="Profile Picture">
+                </div>
+                <div class="about-content">
+                    <h5 class="section-subtitle">MY INTRODUCTION</h5>
+                    <h2>About Me</h2>
+                    <p>
+                        I’m Abhishek Sandeep Nasalapure, a frontend developer from Karnataka focused on building clean,
+                        responsive, and user-friendly web experiences. I work with HTML, CSS, and JavaScript, and have
+                        built projects like a fashion e-commerce site and my personal portfolio.
+                    </p>
+                    <p>
+                        I also use Python for problem-solving and automation, which strengthens my development approach.
+                        I’m passionate about UI design, performance, and continuously improving through projects and
+                        hackathons.
+                    </p>
+
+                    <p><em>“Design is intelligence made visible. Code brings it to life.”</em></p>
+
+
+                    <div class="about-details">
+                        <p><strong>Name:</strong> Abhishek Sandeep Nasalapure</p>
+                        <p><strong>Date of birth:</strong> 20th March 2006</p>
+                        <p><strong>Address:</strong> Belagavi, Karnataka, India</p>
+                        <p><strong>Pin code:</strong> 591244</p>
+                        <p><strong>Email:</strong> abhisheknasalapure10008@gmail.com</p>
+                        <p><strong>Phone:</strong> +91 7026162108</p>
+                    </div>
+
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <h3 class="stat-number" data-target="10">0</h3>
+                            <p>Projects</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3 class="stat-number" data-target="5">0</h3>
+                            <p>Hackathons</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3 class="stat-number" data-target="2">0</h3>
+                            <p>Years Learning</p>
+                        </div>
+                    </div>
+
+                    <div class="interests">
+                        <span><i class="fas fa-gamepad"></i> Esports</span>
+                        <span><i class="fas fa-music"></i> Music</span>
+                        <span><i class="fas fa-camera"></i> Photography</span>
+                        <span><i class="fas fa-baseball"></i> Cricket</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <h5 class="section-subtitle">MY TALENT</h5>
+            <h2>My Skills</h2>
+            <div class="skills-grid">
+                <!-- HTML -->
+                <div class="skill-card-wrapper">
+                    <div class="skill-card">
+                        <div class="skill-card-front">
+                            <img src="./assets/html.png" class="skill-icon" alt="HTML" />
+                            <h4>HTML</h4>
+                        </div>
+                        <div class="skill-card-back">
+                            <div class="progress-ring-container">
+                                <svg class="progress-ring" width="80" height="80">
+                                    <circle class="progress-ring-bg" cx="40" cy="40" r="35" />
+                                    <circle class="progress-ring-circle" cx="40" cy="40" r="35" data-percent="95" />
+                                </svg>
+                                <span class="percent">95%</span>
+                            </div>
+                            <p>Structure & SEO</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CSS -->
+                <div class="skill-card-wrapper">
+                    <div class="skill-card">
+                        <div class="skill-card-front">
+                            <img src="./assets/css.png" class="skill-icon" alt="CSS" />
+                            <h4>CSS</h4>
+                        </div>
+                        <div class="skill-card-back">
+                            <div class="progress-ring-container">
+                                <svg class="progress-ring" width="80" height="80">
+                                    <circle class="progress-ring-bg" cx="40" cy="40" r="35" />
+                                    <circle class="progress-ring-circle" cx="40" cy="40" r="35" data-percent="92" />
+                                </svg>
+                                <span class="percent">92%</span>
+                            </div>
+                            <p>Design & Layout</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- JavaScript -->
+                <div class="skill-card-wrapper">
+                    <div class="skill-card">
+                        <div class="skill-card-front">
+                            <img src="./assets/javascript.png" class="skill-icon" alt="JavaScript" />
+                            <h4>JavaScript</h4>
+                        </div>
+                        <div class="skill-card-back">
+                            <div class="progress-ring-container">
+                                <svg class="progress-ring" width="80" height="80">
+                                    <circle class="progress-ring-bg" cx="40" cy="40" r="35" />
+                                    <circle class="progress-ring-circle" cx="40" cy="40" r="35" data-percent="80" />
+                                </svg>
+                                <span class="percent">80%</span>
+                            </div>
+                            <p>Logic & Interactivity</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Python -->
+                <div class="skill-card-wrapper">
+                    <div class="skill-card">
+                        <div class="skill-card-front">
+                            <img src="./assets/python.png" class="skill-icon" alt="Python" />
+                            <h4>Python</h4>
+                        </div>
+                        <div class="skill-card-back">
+                            <div class="progress-ring-container">
+                                <svg class="progress-ring" width="80" height="80">
+                                    <circle class="progress-ring-bg" cx="40" cy="40" r="35" />
+                                    <circle class="progress-ring-circle" cx="40" cy="40" r="35" data-percent="60" />
+                                </svg>
+                                <span class="percent">60%</span>
+                            </div>
+                            <p>Data & Scripting</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bootstrap -->
+                <div class="skill-card-wrapper">
+                    <div class="skill-card">
+                        <div class="skill-card-front">
+                            <img src="./assets/bootstrap.png" class="skill-icon" alt="Bootstrap" />
+                            <h4>Bootstrap</h4>
+                        </div>
+                        <div class="skill-card-back">
+                            <div class="progress-ring-container">
+                                <svg class="progress-ring" width="80" height="80">
+                                    <circle class="progress-ring-bg" cx="40" cy="40" r="35" />
+                                    <circle class="progress-ring-circle" cx="40" cy="40" r="35" data-percent="90" />
+                                </svg>
+                                <span class="percent">90%</span>
+                            </div>
+                            <p>Responsive Framework</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- React -->
+                <div class="skill-card-wrapper">
+                    <div class="skill-card">
+                        <div class="skill-card-front">
+                            <img src="./assets/react.png" class="skill-icon" alt="React" />
+                            <h4>React</h4>
+                        </div>
+                        <div class="skill-card-back">
+                            <div class="progress-ring-container">
+                                <svg class="progress-ring" width="80" height="80">
+                                    <circle class="progress-ring-bg" cx="40" cy="40" r="35" />
+                                    <circle class="progress-ring-circle" cx="40" cy="40" r="35" data-percent="78" />
+                                </svg>
+                                <span class="percent">78%</span>
+                            </div>
+                            <p>Modern Frontend</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Figma -->
+                <div class="skill-card-wrapper">
+                    <div class="skill-card">
+                        <div class="skill-card-front">
+                            <img src="./assets/figma.png" class="skill-icon" alt="Figma" />
+                            <h4>Figma</h4>
+                        </div>
+                        <div class="skill-card-back">
+                            <div class="progress-ring-container">
+                                <svg class="progress-ring" width="80" height="80">
+                                    <circle class="progress-ring-bg" cx="40" cy="40" r="35" />
+                                    <circle class="progress-ring-circle" cx="40" cy="40" r="35" data-percent="60" />
+                                </svg>
+                                <span class="percent">60%</span>
+                            </div>
+                            <p>UI/UX Prototyping</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Java -->
+                <div class="skill-card-wrapper">
+                    <div class="skill-card">
+                        <div class="skill-card-front">
+                            <img src="./assets/java.png" class="skill-icon" alt="Java" />
+                            <h4>Java</h4>
+                        </div>
+                        <div class="skill-card-back">
+                            <div class="progress-ring-container">
+                                <svg class="progress-ring" width="80" height="80">
+                                    <circle class="progress-ring-bg" cx="40" cy="40" r="35" />
+                                    <circle class="progress-ring-circle" cx="40" cy="40" r="35" data-percent="75" />
+                                </svg>
+                                <span class="percent">75%</span>
+                            </div>
+                            <p>OOP & Backend</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Node JS -->
+                <div class="skill-card-wrapper">
+                    <div class="skill-card">
+                        <div class="skill-card-front">
+                            <img src="./assets/node js.png" class="skill-icon" alt="Node JS" />
+                            <h4>Node JS</h4>
+                        </div>
+                        <div class="skill-card-back">
+                            <div class="progress-ring-container">
+                                <svg class="progress-ring" width="80" height="80">
+                                    <circle class="progress-ring-bg" cx="40" cy="40" r="35" />
+                                    <circle class="progress-ring-circle" cx="40" cy="40" r="35" data-percent="70" />
+                                </svg>
+                                <span class="percent">70%</span>
+                            </div>
+                            <p>Server-side JS</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- GitHub -->
+                <div class="skill-card-wrapper">
+                    <div class="skill-card">
+                        <div class="skill-card-front">
+                            <img src="./assets/github.png" class="skill-icon" alt="GitHub" />
+                            <h4>GitHub</h4>
+                        </div>
+                        <div class="skill-card-back">
+                            <div class="progress-ring-container">
+                                <svg class="progress-ring" width="80" height="80">
+                                    <circle class="progress-ring-bg" cx="40" cy="40" r="35" />
+                                    <circle class="progress-ring-circle" cx="40" cy="40" r="35" data-percent="70" />
+                                </svg>
+                                <span class="percent">70%</span>
+                            </div>
+                            <p>Version Control</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- C -->
+                <div class="skill-card-wrapper">
+                    <div class="skill-card">
+                        <div class="skill-card-front">
+                            <img src="./assets/c.png" class="skill-icon" alt="C" />
+                            <h4>C</h4>
+                        </div>
+                        <div class="skill-card-back">
+                            <div class="progress-ring-container">
+                                <svg class="progress-ring" width="80" height="80">
+                                    <circle class="progress-ring-bg" cx="40" cy="40" r="35" />
+                                    <circle class="progress-ring-circle" cx="40" cy="40" r="35" data-percent="50" />
+                                </svg>
+                                <span class="percent">50%</span>
+                            </div>
+                            <p>Systems Programming</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ML -->
+                <div class="skill-card-wrapper">
+                    <div class="skill-card">
+                        <div class="skill-card-front">
+                            <img src="./assets/ML.png" class="skill-icon" alt="Machine Learning" />
+                            <h4>Machine Learning</h4>
+                        </div>
+                        <div class="skill-card-back">
+                            <div class="progress-ring-container">
+                                <svg class="progress-ring" width="80" height="80">
+                                    <circle class="progress-ring-bg" cx="40" cy="40" r="35" />
+                                    <circle class="progress-ring-circle" cx="40" cy="40" r="35" data-percent="30" />
+                                </svg>
+                                <span class="percent">30%</span>
+                            </div>
+                            <p>AI & Algorithms</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Project card -->
+
+    <section id="projects" class="projects-section">
+        <h5 class="section-subtitle">MY WORK</h5>
+        <h2 class="section-title">Major Projects</h2>
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="frontend">Frontend</button>
+            <button class="filter-btn" data-filter="fullstack">Full-stack</button>
+            <button class="filter-btn" data-filter="ai">AI</button>
+            <button class="filter-btn" data-filter="tools">Tools</button>
+        </div>
+        <div class="projects-grid">
+            <div class="project-card" data-category="fullstack">
+                <img src="./assets/./OmniFood.png" alt="OmniFood Project" />
+                <div class="project-overlay">
+                    <h3>OmniFood-Never cook again</h3>
+                    <div class="tech-badges">
+                        <span class="badge">HTML</span>
+                        <span class="badge">CSS</span>
+                        <span class="badge">JS</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/AbhishekNasalapure-1008/omnifood" target="_blank" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+                        <a href="https://omnifood-abhishek.netlify.app/" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i> Live</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" data-category="frontend">
+                <img src="./assets/ALKhayt.png" alt="ALKhayt Project" />
+                <div class="project-overlay">
+                    <h3>Fashion Academy</h3>
+                    <div class="tech-badges">
+                        <span class="badge">HTML</span>
+                        <span class="badge">CSS</span>
+                        <span class="badge">JS</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/AbhishekNasalapure-1008/ALKhayt" target="_blank" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+                        <a href="https://alkhaytfashion.com/" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i> Live</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" data-category="ai">
+                <!-- Corrected: No specific instruction provided, making a trivial change. -->
+                <img src="./assets/CropMind.png" alt="CropMind Project" />
+                <div class="project-overlay">
+                    <h3>Crop Health Diagnosis</h3>
+                    <div class="tech-badges">
+                        <span class="badge">HTML</span>
+                        <span class="badge">CSS</span>
+                        <span class="badge">JS</span>
+                        <span class="badge">Python</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/AbhishekNasalapure-1008/CropMind" target="_blank" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+                        <a href="https://cropmind.netlify.app/" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i> Live</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" data-category="frontend">
+                <img src="./assets/TigerScroll.png" alt="TigerScroll Project" />
+                <div class="project-overlay">
+                    <h3>Scroll Engine</h3>
+                    <div class="tech-badges">
+                        <span class="badge">HTML</span>
+                        <span class="badge">CSS</span>
+                        <span class="badge">GSAP</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/AbhishekNasalapure-1008/TigerScroll" target="_blank" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+                        <a href="https://1442abhitiger-scroll-engine.vercel.app/" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i> Live</a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card" data-category="ai">
+                <!-- Trivial change applied -->
+                <img src="./assets/././ResumeScreen.png" alt="AI Resume Screening Project" />
+                <div class="project-overlay">
+                    <h3>AI Resume Screening</h3>
+                    <div class="tech-badges">
+                        <span class="badge">HTML</span>
+                        <span class="badge">CSS</span>
+                        <span class="badge">JS</span>
+                        <span class="badge">Python</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/AbhishekNasalapure-1008/AI-Resume-Screening" target="_blank" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add more cards if needed -->
+        </div>
+
+        <div class="view-more-wrap">
+            <a href="https://github.com/AbhishekNasalapure-1008?tab=repositories" target="_blank"
+                class="btn view-more-btn">View More</a>
+        </div>
+    </section>
+
+    <!-- Hackathons Section -->
+    <section id="hackathons" class="projects-section hackathons-section">
+        <h5 class="section-subtitle">MY ACHIEVEMENTS</h5>
+        <h2 class="section-title">Hackathons</h2>
+        <div class="projects-grid">
+
+            <div class="project-card" data-category="hackathon">
+                <img src="./assets/MumbaiHacks.jpg" alt="Mumbai Hacks Certificate" />
+                <div class="project-overlay">
+                    <h3>Mumbai Hacks</h3>
+                    <p>By Mumbai Tech Entrepreneurs</p>
+                    <div class="project-links">
+                        <a href="https://www.linkedin.com/in/abhishek-nasalapure-2076a7387/recent-activity/all/" target="_blank" class="project-link"><i class="fas fa-award"></i> Certificate</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" data-category="hackathon">
+                <img src="./assets/SkyHack.jpeg" alt="SkyHack Certificate" />
+                <div class="project-overlay">
+                    <h3>SkyHack</h3>
+                    <p>By SIT Tumakuru</p>
+                    <div class="project-links">
+                        <a href="https://www.linkedin.com/in/abhishek-nasalapure-2076a7387/recent-activity/all/" target="_blank" class="project-link"><i class="fas fa-award"></i> Certificate</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" data-category="hackathon">
+                <img src="./assets/HackX_certificate.png" alt="HackX 2026 Certificate" />
+                <div class="project-overlay">
+                    <h3>HackX 2026</h3>
+                    <p>By HackX Committee</p>
+                    <div class="project-links">
+                        <a href="https://www.linkedin.com/in/abhishek-nasalapure-2076a7387/recent-activity/all/" target="_blank" class="project-link"><i class="fas fa-award"></i> Certificate</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" data-category="hackathon">
+                <img src="./assets/SynergiX.jpeg" alt="SynergiX Certificate" />
+                <div class="project-overlay">
+                    <h3>SynergiX</h3>
+                    <p>By Builder Base</p>
+                    <div class="project-links">
+                        <a href="https://www.linkedin.com/in/abhishek-nasalapure-2076a7387/recent-activity/all/" target="_blank" class="project-link"><i class="fas fa-award"></i> Certificate</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" data-category="hackathon">
+                <img src="./assets/ByteQuest.jpg" alt="ByteQuest Certificate" />
+                <div class="project-overlay">
+                    <h3>ByteQuest</h3>
+                    <p>By Ramdeobaba University</p>
+                    <div class="project-links">
+                        <a href="https://www.linkedin.com/in/abhishek-nasalapure-2076a7387/recent-activity/all/" target="_blank" class="project-link"><i class="fas fa-award"></i> Certificate</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="view-more-wrap">
+            <a href="https://www.linkedin.com/in/abhishek-nasalapure-2076a7387/recent-activity/all/" target="_blank"
+                class="btn view-more-btn">View More</a>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="projects-section certifications-section">
+        <h5 class="section-subtitle">MY ACHIEVEMENTS</h5>
+        <h2 class="section-title">Certifications</h2>
+        <div class="projects-grid">
+
+            <div class="project-card" data-category="certification">
+                <img src="./assets/100DaysofCode.jpg" alt="100 Days of Code Certificate" />
+                <div class="project-overlay">
+                    <h3>100 Days of Code</h3>
+                    <p>By Kanasu Training Institute</p>
+                    <div class="project-links">
+                        <a href="https://www.linkedin.com/in/abhishek-nasalapure-2076a7387/recent-activity/all/" target="_blank" class="project-link"><i class="fas fa-award"></i> Certificate</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" data-category="certification">
+                <img src="./assets/SimplyLearn.jpeg" alt="Generative AI for Beginners" />
+                <div class="project-overlay">
+                    <h3>Generative AI for Beginners</h3>
+                    <p>By Simplilearn SkillUP</p>
+                    <div class="project-links">
+                        <a href="https://lms.simplilearn.com/courses/7721/Generative%20AI%20for%20Beginners/certificate/download-skillup" target="_blank" class="project-link"><i class="fas fa-award"></i> Certificate</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" data-category="certification">
+                <img src="./assets/Udemy.jpg" alt="ChatGPT Prompt Engineering" />
+                <div class="project-overlay">
+                    <h3>ChatGPT Prompt Engineering</h3>
+                    <p>By Udemy</p>
+                    <div class="project-links">
+                        <a href="https://www.udemy.com/course/chatgpt-prompt-engineering-free-course/learn/lecture/39304344?start=0#overview" target="_blank" class="project-link"><i class="fas fa-award"></i> Certificate</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" data-category="certification">
+                <img src="./assets/Be10X.jpeg" alt="Be10X Workshop" />
+                <div class="project-overlay">
+                    <h3>AI Tools Workshop</h3>
+                    <p>By Be10X</p>
+                    <div class="project-links">
+                        <a href="https://be10x.com/" target="_blank" class="project-link"><i class="fas fa-award"></i> Certificate</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" data-category="certification">
+                <img src="./assets/CertSparks.jpeg" alt="CertSparks Quiz" />
+                <div class="project-overlay">
+                    <h3>CertSparks Quiz</h3>
+                    <p>By CertSparks</p>
+                    <div class="project-links">
+                        <a href="https://www.certsparks.in/quiz" target="_blank" class="project-link"><i class="fas fa-award"></i> Certificate</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="view-more-wrap">
+            <a href="https://www.linkedin.com/in/abhishek-nasalapure-2076a7387/details/certifications/" target="_blank"
+                class="btn view-more-btn">View All Certifications</a>
+        </div>
+    </section>
+
+    <!-- contact -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+
+            <form class="contact-form" onsubmit="handleFormSubmit(event)">
+                <div id="form-feedback" class="form-feedback"></div>
+                <div class="form-group floating-group">
+                    <input type="text" id="name" name="name" placeholder=" " required />
+                    <label for="name">Your Name</label>
+                </div>
+                <div class="form-group floating-group">
+                    <input type="email" id="email" name="email" placeholder=" " required />
+                    <label for="email">Your Email</label>
+                </div>
+                <div class="form-group floating-group">
+                    <textarea rows="5" id="message" name="message" placeholder=" " required></textarea>
+                    <label for="message">Your Message</label>
+                </div>
+                <div class="button-group">
+                    <button type="button" class="btn primary" onclick="sendWhatsApp()">Send Message</button>
+                    <button type="submit" class="btn outline">Send Email</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+
+    <footer class="footer">
+        <div class="footer-container">
+            <h3>1442_abhi</h3>
+            <p>Crafting frontend experiences with code & creativity ✨</p>
+            <div class="social-icons">
+                <a href="https://github.com/AbhishekNasalapure-1008/" target="_blank" title="GitHub Profile">
+                    <i class="fab fa-github"></i>
+                </a>
+
+                <a href="https://www.linkedin.com/in/abhishek-nasalapure-2076a7387/" target="_blank"><i
+                        class="fab fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/1442_abhi/" target="_blank"><i class="fab fa-instagram"></i></a>
+
+            </div>
+            <p class="copyright">© <span id="current-year"></span> Abhishek Sandeep Nasalapure. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+</body>
+
+</html>
