@@ -159,6 +159,9 @@ body {
 .hero-left {
   flex: 1 1 500px;
   z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .hero-left .tagline {
@@ -857,17 +860,31 @@ body {
   .hero {
     flex-direction: column;
     text-align: center;
-    padding: 60px 5%;
+    padding: 100px 5% 40px; /* Reduced bottom padding */
+    min-height: auto; /* Remove 100vh to stop vertical stretching */
   }
 
   .hero-left,
   .hero-right {
     width: 100%;
     max-width: 100%;
+    flex: none; /* Fix: Remove flex-basis 500px/400px which causes stretching in column mode */
   }
 
   .hero-left {
-    margin-bottom: 40px;
+    margin-bottom: 30px; /* Space between text and image */
+  }
+
+  #hero-subtitle {
+    margin-bottom: 20px;
+  }
+
+  .hero-left .tagline {
+    margin-bottom: 15px;
+  }
+
+  .buttons {
+    justify-content: center;
   }
 
   .bg-skew {
@@ -905,14 +922,55 @@ body {
 }
 
 @media (max-width: 768px) {
+  .hero {
+    padding-top: 80px;
+  }
+
   .hero-right img {
-    width: 280px;
-    height: 280px;
+    width: 260px; /* Slightly smaller for mobile */
+    height: 260px;
+  }
+
+  .about-section {
+    padding: 40px 20px; /* Reduced section padding for mobile */
   }
 
   .about-grid {
     flex-direction: column;
     text-align: center;
+    gap: 30px;
+  }
+
+  .about-img img {
+    width: 240px;
+    height: 320px;
+  }
+
+  .about-stats {
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .projects-section {
+    padding: 40px 20px;
+  }
+
+  .skills-section {
+    padding: 40px 20px;
+  }
+
+  .skills-section h2 {
+    margin-bottom: 25px; /* Reduced gap between heading and cards */
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+    gap: 15px; /* Reduced gap between cards */
+    padding: 10px;
+  }
+
+  .skill-card-wrapper {
+    height: 180px; /* Slightly shorter for mobile 2-column layout */
   }
 
   .projects-grid {
@@ -923,6 +981,10 @@ body {
   .project-card {
     width: 95%;
     height: 220px;
+  }
+
+  .footer {
+    padding: 40px 20px;
   }
 
   .footer h3 {

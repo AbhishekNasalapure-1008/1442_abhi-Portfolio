@@ -104,7 +104,6 @@ document.addEventListener("DOMContentLoaded", () => {
         breakLines: false,
         loop: true,
         nextStringDelay: 2000,
-        waitUntilVisible: true,
     }).go();
 
     // 3. Magnetic cursor on buttons
