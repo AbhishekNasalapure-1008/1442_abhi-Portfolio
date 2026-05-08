@@ -288,51 +288,10 @@ function sendWhatsApp() {
     const message = document.getElementById("message").value.trim();
 
     const text = `Name: ${name}%0AEmail: ${email}%0AMessage: ${message}`;
-    const phone = "917026162108"; // ← Replace with your number
+    const phone = "917026162108"; 
     const link = `https://wa.me/${phone}?text=${text}`;
 
     window.open(link, "_blank");
-}
-
-function handleFormSubmit(event) {
-    event.preventDefault();
-    const form = event.target;
-    const formFeedback = document.getElementById("form-feedback");
-
-    function showFeedback(message, type) {
-        formFeedback.textContent = message;
-        formFeedback.className = `form-feedback ${type}`;
-        gsap.to(formFeedback, {
-            opacity: 1,
-            display: "block",
-            duration: 0.3,
-            onComplete: () => {
-                setTimeout(() => {
-                    gsap.to(formFeedback, {
-                        opacity: 0,
-                        display: "none",
-                        duration: 0.3
-                    });
-                }, 5000); // Message disappears after 5 seconds
-            }
-        });
-    }
-
-    // Replace this with your FormSubmit endpoint
-    const formAction = "https://formsubmit.co/abhisheknasalapure10008@gmail.com";
-
-    const formData = new FormData(form);
-    fetch(formAction, {
-        method: "POST",
-        body: formData,
-    })
-        .then(() => {
-            showFeedback("Email sent successfully!", "success");
-            form.reset();
-        })
-        .catch(() => {
-            showFeedback("Failed to send email. Please try again later.", "error");
-        });
 }
 
 // ScrollReveal for other sections
