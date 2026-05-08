@@ -288,7 +288,7 @@ function sendWhatsApp() {
     const message = document.getElementById("message").value.trim();
 
     const text = `Name: ${name}%0AEmail: ${email}%0AMessage: ${message}`;
-    const phone = "916374023707"; // ← Replace with your number
+    const phone = "917026162108"; // ← Replace with your number
     const link = `https://wa.me/${phone}?text=${text}`;
 
     window.open(link, "_blank");
