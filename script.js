@@ -294,6 +294,57 @@ function sendWhatsApp() {
     window.open(link, "_blank");
 }
 
+function handleFormSubmit(event) {
+    event.preventDefault();
+    const form = event.target;
+    const formFeedback = document.getElementById("form-feedback");
+
+    function showFeedback(message, type) {
+        formFeedback.textContent = message;
+        formFeedback.className = `form-feedback ${type}`;
+        gsap.to(formFeedback, {
+            opacity: 1,
+            display: "block",
+            duration: 0.3,
+            onComplete: () => {
+                setTimeout(() => {
+                    gsap.to(formFeedback, {
+                        opacity: 0,
+                        display: "none",
+                        duration: 0.3
+                    });
+                }, 5000);
+            }
+        });
+    }
+
+    const formAction = "https://formsubmit.co/abhisheknasalapure10008@gmail.com";
+    const formData = new FormData(form);
+
+    fetch(formAction, {
+        method: "POST",
+        body: formData,
+        headers: {
+            'Accept': 'application/json'
+        }
+    })
+    .then(response => {
+        if (response.ok) {
+            showFeedback("Email sent successfully!", "success");
+            form.reset();
+            // Redirect after 2 seconds to show the success message first
+            setTimeout(() => {
+                window.location.href = "https://1442-abhi-portfolio.vercel.app/";
+            }, 2000);
+        } else {
+            showFeedback("Failed to send email. Please try again.", "error");
+        }
+    })
+    .catch(() => {
+        showFeedback("Failed to send email. Please try again later.", "error");
+    });
+}
+
 // ScrollReveal for other sections
 ScrollReveal().reveal('.navbar', { origin: 'top', distance: '20px', duration: 800, delay: 200 });
 ScrollReveal().reveal('.contact-section', { origin: 'bottom', distance: '60px', duration: 1000, delay: 300 });
